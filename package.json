@@ -1,0 +1,46 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"yarn serve\" \"wait-on http://localhost:3000 && yarn electron-start\"",
+    "serve": "cross-env BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-start": "yarn run electron ."
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "electron": "^4.0.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "eslint": "^5.8.0",
+    "wait-on": "^3.2.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "react-app",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 0.2%",
+    "last 2 versions",
+    "not ie <= 8",
+    "not dead",
+    "not op_mini all"
+  ]
+}
